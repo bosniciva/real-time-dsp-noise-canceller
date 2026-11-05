@@ -18,15 +18,15 @@ The processing core analyzes the unoptimized signal spectra to calculate cutoff 
 The implementation evaluates compiler profiling and passband ripples across alternative FIR Tap depths to balance transition-band sharpness against system group delay:
 
 ### 1. 35-Tap FIR Baseline Configuration
-*   **Characteristics:** Lowest group delay configuration ($354.16\text{ \mu s}$); wider transition band regions.
+*   **Characteristics:** Lowest group delay configuration (354.16 µs); wider transition band regions.
 *   **Result:** Fast execution profile, but lower out-of-band attenuation.
 
 ### 2. 77-Tap FIR Mid-Tier Profile
-*   **Characteristics:** Sharpens the roll-off curve cleanly; intermediate response latency ($791.66\text{ \mu s}$).
+*   **Characteristics:** Sharpens the roll-off curve cleanly; intermediate response latency (791.66 µs).
 *   **Result:** Smooth, reliable noise-floor reduction with enhanced attenuation limits.
 
 ### 3. 129-Tap FIR High-Selectivity Engine
-*   **Characteristics:** Maximum stopband attenuation; narrowest transition band width at the cost of processing latency ($1.333\text{ ms}$).
+*   **Characteristics:** Maximum stopband attenuation; narrowest transition band width at the cost of processing latency (1.333 ms).
 *   **Result:** High spectral purity and effective elimination of side-lobe pollution leaks.
 
 ---
